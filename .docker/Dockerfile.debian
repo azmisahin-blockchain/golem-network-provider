@@ -103,7 +103,7 @@ RUN apt-get update && \
 COPY . .
 
 # install build dependencies
-
+RUN .docker/as-provider.sh
 
 
 # Test stage

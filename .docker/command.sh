@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Application launch commands.
 echo PRODUCTION
@@ -23,6 +23,10 @@ echo SWICH_TRACKING_ERROR=$SWICH_TRACKING_ERROR
 echo SWICH_TRACKING_VERBOSE=$SWICH_TRACKING_VERBOSE
 echo SWICH_TRACKING_REPORT=$SWICH_TRACKING_REPORT
 
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+export PATH="$HOME/.local/bin:$PATH"
+golemsp run --subnet $SUBNET --account $YA_ACCOUNT --payment-network $YA_PAYMENT_NETWORK_GROUP
+
 sleep infinity
 
-/bin/sh
+/bin/bash

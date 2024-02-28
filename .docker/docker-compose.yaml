@@ -42,11 +42,11 @@ services:
       - data:/data
 
     # must be launched in production environments
-    command: /bin/sh -c ".docker/command.sh"
+    command: /bin/bash -c ".docker/command.sh"
 
-    ports:
-      # if you need to range
-      - "$TCP_RANGE:$TCP_PORT"
+    # ports:
+    #   # if you need to range
+    #   - "$TCP_RANGE:$TCP_PORT"
 
     restart: "always"
 
